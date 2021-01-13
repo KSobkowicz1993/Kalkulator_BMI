@@ -13,39 +13,45 @@ calc.addEventListener('click', () => {
     let result = document.querySelector('#result');
     let descriptionBMI;
 
-    let bmi = parseFloat(weight) / (parseFloat(height) / 100 * parseFloat(height) / 100);
-    bmi = Math.round(bmi);
+    //podaje zakres wartosci height weight dla ktorych kalkulator bedzie obliczal BMI
+    if (weight >= 10 && height >= 80 && height <= 250) {
+        let bmi = parseFloat(weight) / (parseFloat(height) / 100 * parseFloat(height) / 100);
+        bmi = Math.round(bmi);
+        result.innerHTML = bmi;
 
-    result.innerHTML = bmi;
+        if (bmi < 16) {
+            descriptionBMI = "Jesteś wygłodzony, musisz więcej jeść!"
+            description.innerHTML = descriptionBMI;
+        }
+        if (bmi > 16 && bmi < 17) {
+            descriptionBMI = "Jesteś wygchudzony, musisz więcej jeść!"
+            description.innerHTML = descriptionBMI;
+        }
+        if (bmi > 17 && bmi < 18.5) {
+            descriptionBMI = "Masz niedowagę, musisz więcej jeść!"
+            description.innerHTML = descriptionBMI;
+        }
+        if (bmi > 18.5 && bmi < 25) {
+            descriptionBMI = "Twoja waga jest prawidłowa, tak trzymaj :)!"
+            description.innerHTML = descriptionBMI;
+        }
+        if (bmi > 30 && bmi < 35) {
+            descriptionBMI = "Osiągnąłeś I stopień otyłości, musisz schudnąć!"
+            description.innerHTML = descriptionBMI;
+        }
+        if (bmi > 35 && bmi < 40) {
+            descriptionBMI = "Osiągnąłeś II stopień otyłości, musisz schudnąć!"
+            description.innerHTML = descriptionBMI;
+        }
+        if (bmi > 40) {
+            descriptionBMI = "Jesteś skrajnie otyły, nadwaga poważnie zagraża Twojemu zdrowiu :( !"
+            description.innerHTML = descriptionBMI;
+        }
+    } else {
+        descriptionBMI = "Podaj poprawne dane!!! Nasz kalkulator oblicza BMI dla wzrostu w zakresie 80-250cm, oraz wagi powyżej 10kg."
+        description.innerHTML = descriptionBMI;
+    }
 
-    if (bmi < 16) {
-        descriptionBMI = "Jesteś wygłodzony, musisz więcej jeść!"
-        description.innerHTML = descriptionBMI;
-    }
-    if (bmi > 16 && bmi < 17) {
-        descriptionBMI = "Jesteś wygchudzony, musisz więcej jeść!"
-        description.innerHTML = descriptionBMI;
-    }
-    if (bmi > 17 && bmi < 18.5) {
-        descriptionBMI = "Masz niedowagę, musisz więcej jeść!"
-        description.innerHTML = descriptionBMI;
-    }
-    if (bmi > 18.5 && bmi < 25) {
-        descriptionBMI = "Twoja waga jest prawidłowa, tak trzymaj :)!"
-        description.innerHTML = descriptionBMI;
-    }
-    if (bmi > 30 && bmi < 35) {
-        descriptionBMI = "Osiągnąłeś I stopień otyłości, musisz schudnąć!"
-        description.innerHTML = descriptionBMI;
-    }
-    if (bmi > 35 && bmi < 40) {
-        descriptionBMI = "Osiągnąłeś II stopień otyłości, musisz schudnąć!"
-        description.innerHTML = descriptionBMI;
-    }
-    if (bmi > 40) {
-        descriptionBMI = "Jesteś skrajnie otyły, nadwaga poważnie zagraża Twojemi zdrowiu :(!"
-        description.innerHTML = descriptionBMI;
-    }
 });
 
 clear.addEventListener('click', () => {
