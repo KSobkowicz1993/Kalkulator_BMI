@@ -24,7 +24,7 @@ calc.addEventListener('click', () => {
             description.innerHTML = descriptionBMI;
         }
         if (bmi > 16 && bmi < 17) {
-            descriptionBMI = "Jesteś wygchudzony, musisz więcej jeść!"
+            descriptionBMI = "Jesteś wychudzony, musisz więcej jeść!"
             description.innerHTML = descriptionBMI;
         }
         if (bmi > 17 && bmi < 18.5) {
