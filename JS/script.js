@@ -18,7 +18,7 @@ calc.addEventListener('click', () => {
     //podaje zakres wartosci height weight dla ktorych kalkulator bedzie obliczal BMI
     if (weight >= 10 && height >= 80 && height <= 250) {
         let bmi = parseFloat(weight) / (parseFloat(height) / 100 * parseFloat(height) / 100);
-        bmi = Math.round(bmi);
+        bmi = Math.round(bmi*10)/10;
         result.innerHTML = bmi;
 
         if (bmi <= 16) {
