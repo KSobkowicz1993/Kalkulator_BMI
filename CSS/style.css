@@ -4,6 +4,9 @@
     box-sizing: border-box;
 }
 
+html{
+    font-size: 20px;
+}
 
 .bmi{
     display: flex;
@@ -11,10 +14,9 @@
     align-items: center;
     justify-content: center;
     margin-top: 20px;
-    padding: 10px;
+    padding: 6px;
     text-align: center;
-    line-height: 20px;
-    font-size: 28px;
+    line-height: 10px;
 }
 
 input{
@@ -22,29 +24,55 @@ input{
 }
 
 .container{
-    border: 1px solid black;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    line-height: 20px;
-    text-align: center;
-    font-size: 24px;
+    border: 2px solid grey;
+    height: 100%;
+    margin: 0 auto;
+    width: 50%;
+    background-color: rgba(211, 211, 211, 0.4);
 }
 
 
 #description, #result{
-    font-size: 24px;
     color: red;
+    padding-bottom: 10px;
+    text-align: center;
 }
 
 h2{
-    font-size: 24px;
-    padding: 20px;
+    text-align: center;
+    margin: 10px;
+}
+
+#skala{
+    border-bottom: 3px dotted blue;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
 }
 
 button{
     margin: 10px;
     padding: 10px;
 }
+
+.skala{
+    border: 3px solid blue;
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    background-color: aliceblue;
+}
+
+ul{
+    display: block;
+    text-align: left;
+    line-height: 30px;
+    text-align: center;
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+

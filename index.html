@@ -9,18 +9,32 @@
 </head>
 
 <body>
-
-    <div class="bmi">
-        Wzrost<input type="number" id="height" required placeholder="Wpisz wzrost w cm"> <br>
-        Waga<input type="number" id="weight" required placeholder="Wpisz wagę w kg"> <br>
-
-        <button id="calc">Oblicz BMI</button>
-        <button id="clear">Resetuj wynik</button>
+    <div class="container">
+        <div class="bmi">
+            Wzrost <input type="number" id="height" required placeholder="Wpisz wzrost w cm"> <br>
+            Waga <input type="number" id="weight" required placeholder="Wpisz wagę w kg"> <br>
+            <button id="calc">Oblicz BMI</button>
+            <button type="reset" id="clear"> Resetuj wynik </button>
+        </div>
     </div>
 
     <div class="container">
         <h2>Twoja wartość BMI wynosi: </h2>
         <div id="result"></div>
+    </div>
+
+    <div class="skala">
+        <h2 id="skala">Skala wartości BMI:</h2>
+        <ul>
+            <li>mniej niż 16 - wygłodzenie</li>
+            <li>16 - 16.99 - wychudzenie</li>
+            <li>17 - 18.49 - niedowaga</li>
+            <li>18.5 - 24.99 - wartość prawidłowa</li>
+            <li>25 - 29.99 - nadwaga</li>
+            <li>30 - 34.99 - I stopień otyłości</li>
+            <li>35 - 39.99 - II stopień otyłości</li>
+            <li>powyżej 40 - otyłość skrajna</li>
+        </ul>
     </div>
 
     <div class="container">
