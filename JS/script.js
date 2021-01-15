@@ -15,6 +15,11 @@ calc.addEventListener('click', () => {
     let result = document.querySelector('#result');
     let descriptionBMI;
 
+    li.forEach((e) => {
+        e.style.color = "black";
+        e.style.border = "none";
+    });
+
     //podaje zakres wartosci height weight dla ktorych kalkulator bedzie obliczal BMI
     if (weight >= 10 && height >= 80 && height <= 250) {
         let bmi = parseFloat(weight) / (parseFloat(height) / 100 * parseFloat(height) / 100);

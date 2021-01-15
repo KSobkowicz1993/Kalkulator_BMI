@@ -11,8 +11,8 @@
 <body>
     <div class="container">
         <div class="bmi">
-            Wzrost <input type="number" id="height" required placeholder="Wpisz wzrost w cm"> <br>
-            Waga <input type="number" id="weight" required placeholder="Wpisz wagę w kg"> <br>
+            Wzrost <input type="number" id="height" onfocus="this.value=''"  required placeholder="Wpisz wzrost w cm"> <br>
+            Waga <input type="number" id="weight" onfocus="this.value=''" required placeholder="Wpisz wagę w kg"> <br>
             <button id="calc">Oblicz BMI</button>
             <button type="reset" id="clear"> Resetuj wynik </button>
         </div>
